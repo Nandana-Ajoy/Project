@@ -1,0 +1,145 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d6b9cc; /* Light Beige */
+    color: #6c3d74; /* Charcoal Gray */
+    text-align: center;
+}
+a {
+    color: #28052d;
+    text-decoration: none;
+}
+
+/* Header */
+.top-bar {
+    background-color: #34224f; /* Soft Taupe */
+    padding: 10px;
+    font-size: 1rem;
+    color: #e2d9e1;
+}
+
+/* Navigation Bar */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d6b9cc;
+    padding: 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Great Vibes', cursive;
+    color: #310e3f;
+    font-size: 2.5rem; /* Adjusted size */
+    gap: 10px;
+}
+.paw-icon {
+    width: 30px; /* Reduced size */
+    height: 30px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.nav-links li a:hover {
+    color: #544958;
+    text-decoration: underline;
+}
+.search-bar {
+    display: flex;
+    align-items: center; /* Proper alignment */
+    gap: 5px;
+}
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eadede;
+    color: #fff;
+    border: 2px solid #836ba3;
+    width: 200px; /* Limit width */
+}
+.search-bar button {
+    background-color: #eadede;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.search-bar button:hover {
+    background-color: #ad8dd8;
+}
+
+/* Recipe Gallery */
+.cake-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+.cake {
+    background-color: #34224f;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(225, 219, 219, 0.086);
+    transition: transform 0.2s ease;
+}
+.cake:hover {
+    transform: translateY(-10px);
+}
+.cake img {
+    width: 100%;
+    border-radius: 10px;
+}
+.cake p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #f1eeee;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem; /* Adjust logo size */
+    }
+    .paw-icon {
+        width: 25px;
+        height: 25px;
+    }
+    .cake-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Adjust for medium screens */
+    }
+    .search-bar input {
+        width: 150px; /* Reduce width on smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    .cake-gallery {
+        grid-template-columns: 1fr; /* Adjust for small screens */
+    }
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
